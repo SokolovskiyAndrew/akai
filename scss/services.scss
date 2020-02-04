@@ -1,0 +1,428 @@
+@import 'base';
+$colar-color: #7beec7;
+$grey-color: #60606e;
+
+$OpenSans: 'Open Sans',
+sans-serif;
+
+$montserrat:'Montserrat',
+sans-serif;
+
+* {
+    font-family: $montserrat;
+    color: $grey-color;
+}
+
+.header {
+    background-image: url(../img/service/svc_header_bg.png);
+    background-size: cover;
+    background-color: $grey-color;
+    font-family: $montserrat;
+    // min-height: 100vh;
+    padding-top: 42px;
+    position: relative;
+    color: $grey-color;
+
+    img {
+        max-width: 472px;
+    }
+}
+
+.menu {
+    position: absolute;
+    top: 0;
+    background-color: $grey-color;
+    color: white;
+    flex-direction: column;
+    padding: 10px;
+    font-family: $montserrat;
+    font-weight: bold;
+    width: 300px;
+
+    &__item {
+        padding: 10px;
+        color: white;
+    }
+
+    a {
+        transition: all .5 ease-in;
+
+        &:hover,
+        &:active {
+            color: $colar-color;
+            text-decoration: underline;
+        }
+    }
+}
+
+#nav {
+    position: relative;
+
+    .close {
+        position: absolute;
+        right: 2%;
+        top: 2%;
+        color: white;
+
+        &:hover {
+            color: $colar-color;
+            cursor: pointer;
+        }
+    }
+}
+
+
+.nav {
+    display: none;
+}
+
+.nav-active {
+    display: block;
+}
+
+.nav-close {
+    display: none;
+}
+
+
+#burger {
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    transition: all ease-in-out 2.5;
+
+}
+
+
+.line {
+    width: 30px;
+    height: 1px;
+    background-color: $grey-color;
+    margin: 3px;
+
+
+    &_two {
+        width: 15px;
+        height: 1px;
+
+    }
+
+    &_three {
+        width: 22px;
+        height: 1px;
+        transform: rotate();
+    }
+
+    &-active {
+        width: 30px;
+    }
+}
+
+.head {
+    margin: auto;
+    padding: 164px 0 165px;
+    color: $grey-color;
+
+    &-title {
+        margin: auto;
+        text-transform: uppercase;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 36px;
+        text-align: center;
+        padding-bottom: 24px;
+
+        &_main {
+            text-align: center;
+            font-family: $montserrat;
+            font-weight: bold;
+            font-size: 14px;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.choose {
+    color: $grey-color;
+
+    img {
+        width: 457px;
+    }
+
+    &_top {
+        margin: auto;
+        text-align: center;
+        max-width: 750px;
+        margin-bottom: 100px;
+    }
+
+    &_title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 30px;
+        margin: 150px 0 28px;
+        padding-bottom: 5px;
+        background-image: url(../img/Shape.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+    }
+
+    &_text {
+        font-family: $OpenSans;
+        font-size: 14px;
+    }
+
+    &_left {
+        font-family: $OpenSans;
+        font-size: 14px;
+    }
+
+    &_info {
+        margin-bottom: 50px;
+        line-height: 4vh;
+    }
+
+    &_item {
+
+        height: 40px;
+        width: 210px;
+
+        i {
+            color: $colar-color;
+            background-color: white;
+            padding-right: 10px;
+        }
+    }
+
+    &_cont {
+        margin-bottom: 150px;
+    }
+}
+
+.options {
+    i {
+        display: block;
+        font-size: 50px;
+        margin-bottom: 28px;
+        background-image: url(../img/Shape.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-position-x: 45%;
+        transition: transform .7s;
+
+        &:hover {
+            transform: rotateY(180deg);
+            cursor: pointer;
+        }
+    }
+
+    &_title {
+        font-family: $montserrat;
+        font-weight: bold;
+        font-style: 18px;
+    }
+
+    &_text {
+        font-family: $OpenSans;
+        font-size: 14px;
+        line-height: 4vh;
+    }
+}
+
+.card {
+    max-width: 360px;
+    border: none;
+    border-top: 5px solid $colar-color;
+
+    border-radius: 0;
+    border-top-right-radius: 50px 10%;
+
+    padding: 38px 40px 40px;
+    transition: transform 0.5s, box-shadow 0.4s;
+    margin: 0 20px;
+    margin-bottom: 100px;
+
+    &:hover {
+        cursor: pointer;
+        transform: scale(1.02);
+        -webkit-box-shadow: 0px 19px 25px 6px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 0px 19px 25px 6px rgba(0, 0, 0, 0.75);
+        box-shadow: 0px 19px 25px 6px rgba(0, 0, 0, 0.75);
+    }
+
+    &_title {
+        text-transform: uppercase;
+        font-weight: bold;
+        font-style: 30px;
+
+        &-price {
+            width: 165px;
+            background-color: $colar-color;
+            color: white;
+            text-transform: uppercase;
+            font-size: 14px;
+            font-weight: bold;
+            padding: 4px 20px;
+            margin-bottom: 50px;
+        }
+    }
+
+    &_info {
+        font-family: $OpenSans;
+        font-weight: 14px;
+        margin-bottom: 50px;
+        line-height: 5vh;
+    }
+
+    &_btn {
+        width: 165px;
+        height: 50px;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        background-color: $colar-color;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 14px;
+
+        &:hover {
+            &:hover {
+                color: $colar-color;
+                background-color: white;
+                border: 2px solid $colar-color;
+                border-radius: 15px;
+            }
+        }
+    }
+
+    i {
+        color: $colar-color;
+        background-color: white;
+        padding-right: 10px;
+
+        &:hover {
+            cursor: pointer;
+            color: rgb(49, 49, 206);
+            transform: scale(1.1);
+        }
+    }
+}
+
+.contact {
+    background-color: $colar-color;
+    color: white;
+    padding-top: 50px;
+
+    &_right {
+        background-color: white;
+        color: $grey-color;
+        margin-bottom: 50px;
+        padding: 22px 30px;
+    }
+
+    &_title {
+        font-style: 30px;
+        line-height: 6vh;
+        margin-bottom: 30px;
+        font-weight: bold;
+    }
+
+    &_btn {
+        width: 165px;
+        height: 50px;
+        text-transform: uppercase;
+        color: $colar-color;
+        border: none;
+        background-color: white;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 14px;
+        margin-bottom: 20px;
+
+        &:hover {
+            color: $colar-color;
+            background-color: white;
+            border: 2px solid $colar-color;
+            border-radius: 15px;
+        }
+    }
+}
+
+.form {
+    &_title {
+        font-weight: bold;
+        font-size: 24px;
+        max-width: 340px;
+        line-height: 5vh;
+    }
+
+    &_text {
+        font-family: $OpenSans;
+        font-size: 16px;
+        margin-bottom: 18px;
+    }
+
+    &-control {
+        text-transform: uppercase;
+        font-size: 12px;
+        border-radius: 0px;
+        // max-width: 372px;
+        width: 100%;
+        height: 50px;
+    }
+
+    &_btn {
+        width: 135px;
+        height: 50px;
+        text-transform: uppercase;
+        color: white;
+        border: none;
+        background-color: $colar-color;
+        font-family: $montserrat;
+        font-weight: bold;
+        font-size: 14px;
+
+        &:hover {
+            color: $colar-color;
+            background-color: white;
+            border: 2px solid $colar-color;
+
+        }
+    }
+}
+
+.footer {
+    text-transform: uppercase;
+    padding: 50px 0;
+    color: grey;
+    font-family: $OpenSans;
+    font-size: 14px;
+
+    &_author {
+        margin-bottom: 28px;
+    }
+
+    i {
+        margin: 10px;
+
+        &:hover {
+            color: $colar-color;
+            cursor: pointer;
+            transform: scale(1.5);
+            text-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 1.0);
+        }
+    }
+
+    .menu__item {
+        margin-right: 2px;
+        color: $grey-color;
+
+        &:hover {
+            text-decoration: underline;
+            color: $grey-color;
+            transform: scale(1.1);
+            text-shadow: 10px 10px 10px rgba($color: #000000, $alpha: 1.0);
+
+        }
+    }
+}
