@@ -11,13 +11,13 @@ sans-serif;
 .header {
     background-image: url(../img/header_bg.png);
     background-size: cover;
-    min-height: 100vh;
+    // height: 125vh;
     padding-top: 42px;
     position: relative;
     color: $grey-color;
 
     img {
-        max-width: 472px;
+        max-width: 100%;
     }
 
     &_btn {
@@ -136,10 +136,11 @@ sans-serif;
     }
 }
 
+
 .head {
     text-align: center;
     margin: auto;
-    padding: 164px 0 165px;
+    padding: 164px 0 125px;
     color: $grey-color;
 
     &-title {
@@ -164,16 +165,16 @@ sans-serif;
         }
     }
 
-    &_img {
-        width: 472px;
-        height: 501px;
-    }
+}
 
-    &_subtitle {
+.about {
+    padding-bottom: 150px;
+
+    &_title {
         text-transform: uppercase;
         font-weight: bold;
         font-size: 30px;
-        margin-bottom: 28px;
+        margin: 30px 0 28px;
         padding-bottom: 5px;
         background-image: url(../img/Shape.png);
         background-repeat: no-repeat;
@@ -181,14 +182,10 @@ sans-serif;
 
     }
 
-    &_subtext {
+    &_text {
         font-family: $OpenSans;
         font-size: 16px;
         margin-bottom: 26px;
-    }
-
-    &_wrap {
-        flex-wrap: wrap;
     }
 }
 
@@ -207,10 +204,11 @@ sans-serif;
     }
 
     &_title {
+        margin-top: 100px;
         text-transform: uppercase;
         font-weight: bold;
         font-size: 30px;
-        margin: 150px 0 28px;
+        margin-bottom: 28px;
         padding-bottom: 5px;
         background-image: url(../img/Shape.png);
         background-repeat: no-repeat;
@@ -290,7 +288,7 @@ img {
 
 .gallery_item {
     margin-bottom: 30px;
-    padding: 0 10px;
+    margin: 0 px 30px;
 }
 
 .contact {
@@ -414,5 +412,28 @@ img {
 @media only screen and (max-width: 1199px) {
     .portfolio_menu {
         flex-wrap: wrap;
+    }
+}
+
+@media only screen and (max-width: 992px) {
+    .about {
+        align-content: center;
+
+    }
+
+    &_low {
+        align-items: center;
+    }
+
+    .header_btn {
+        margin: auto;
+    }
+
+    .choose_img {
+        justify-content: center;
+
+        img {
+            max-width: 100%;
+        }
     }
 }

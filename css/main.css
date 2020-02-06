@@ -28,12 +28,11 @@ img {
 .header {
   background-image: url(../img/header_bg.png);
   background-size: cover;
-  min-height: 100vh;
   padding-top: 42px;
   position: relative;
   color: #60606e; }
   .header img {
-    max-width: 472px; }
+    max-width: 100%; }
   .header_btn {
     width: 165px;
     height: 50px;
@@ -118,7 +117,7 @@ img {
 .head {
   text-align: center;
   margin: auto;
-  padding: 164px 0 165px;
+  padding: 164px 0 125px;
   color: #60606e; }
   .head-title {
     margin: auto;
@@ -136,24 +135,22 @@ img {
       .head-title_main-desc {
         padding: 24px 10px;
         font-family: "Open Sans", sans-serif; }
-  .head_img {
-    width: 472px;
-    height: 501px; }
-  .head_subtitle {
+
+.about {
+  padding-bottom: 150px; }
+  .about_title {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
-    margin-bottom: 28px;
+    margin: 30px 0 28px;
     padding-bottom: 5px;
     background-image: url(../img/Shape.png);
     background-repeat: no-repeat;
     background-position-y: bottom; }
-  .head_subtext {
+  .about_text {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
     margin-bottom: 26px; }
-  .head_wrap {
-    flex-wrap: wrap; }
 
 .choose {
   color: #60606e; }
@@ -165,10 +162,11 @@ img {
     max-width: 750px;
     margin-bottom: 100px; }
   .choose_title {
+    margin-top: 100px;
     text-transform: uppercase;
     font-weight: bold;
     font-size: 30px;
-    margin: 150px 0 28px;
+    margin-bottom: 28px;
     padding-bottom: 5px;
     background-image: url(../img/Shape.png);
     background-repeat: no-repeat;
@@ -222,7 +220,7 @@ img {
 
 .gallery_item {
   margin-bottom: 30px;
-  padding: 0 10px; }
+  margin: 0 px 30px; }
 
 .contact {
   background-color: #7beec7;
@@ -314,5 +312,17 @@ img {
 @media only screen and (max-width: 1199px) {
   .portfolio_menu {
     flex-wrap: wrap; } }
+
+@media only screen and (max-width: 992px) {
+  .about {
+    align-content: center; }
+  _low {
+    align-items: center; }
+  .header_btn {
+    margin: auto; }
+  .choose_img {
+    justify-content: center; }
+    .choose_img img {
+      max-width: 100%; } }
 
 /*# sourceMappingURL=main.css.map */
